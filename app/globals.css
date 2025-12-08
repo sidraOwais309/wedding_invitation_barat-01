@@ -144,3 +144,15 @@
 .gold-border-glow:hover {
   box-shadow: 0 0 25px rgba(212, 175, 55, 0.5);
 }
+
+/* Blurred text effect: applies a subtle blur to textual content only.
+   Keeping the blur small so content remains readable while achieving
+   the frosted-glass-like text appearance requested. Only apply this
+   class to the textual containers inside cards/tiles. */
+/* Semi-opaque text tile overlay helper.
+   Use an absolutely-positioned element inside tile containers
+   to create a subdued background under text while keeping
+   borders and decorations intact. Prefer Tailwind utility
+   classes (e.g. `bg-card/60 backdrop-blur-sm`) when inserting.
+*/
+

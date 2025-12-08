@@ -25,16 +25,20 @@ export default function ContactSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="relative bg-card border border-border p-8 md:p-12 gold-border-glow"
         >
-          {/* Corner decorations */}
-          <div className="absolute top-0 left-0 w-12 h-12 border-l-2 border-t-2 border-primary/40" />
-          <div className="absolute top-0 right-0 w-12 h-12 border-r-2 border-t-2 border-primary/40" />
-          <div className="absolute bottom-0 left-0 w-12 h-12 border-l-2 border-b-2 border-primary/40" />
-          <div className="absolute bottom-0 right-0 w-12 h-12 border-r-2 border-b-2 border-primary/40" />
+            {/* Semi-opaque tile under textual content (50-60% opacity) */}
+            <div className="absolute inset-0 z-0 pointer-events-none bg-card/60 backdrop-blur-sm" />
 
-          <div className="text-center mb-8">
-            <p className="font-serif text-2xl text-primary mb-2">Tanveer Yousaf</p>
-            <p className="text-muted-foreground text-sm">Contact for RSVP</p>
-          </div>
+            {/* Corner decorations */}
+            <div className="absolute top-0 left-0 w-12 h-12 border-l-2 border-t-2 border-primary/40" />
+            <div className="absolute top-0 right-0 w-12 h-12 border-r-2 border-t-2 border-primary/40" />
+            <div className="absolute bottom-0 left-0 w-12 h-12 border-l-2 border-b-2 border-primary/40" />
+            <div className="absolute bottom-0 right-0 w-12 h-12 border-r-2 border-b-2 border-primary/40" />
+
+            <div className="relative z-10">
+              <div className="text-center mb-8">
+                <p className="font-serif text-2xl text-primary mb-2">Tanveer Yousaf</p>
+                <p className="text-muted-foreground text-sm">Contact for RSVP</p>
+              </div>
 
           <div className="space-y-4">
             {/* Phone Numbers */}
@@ -81,6 +85,7 @@ export default function ContactSection() {
               </a>
             </div>
           </div>
+        </div>
         </motion.div>
       </div>
     </section>

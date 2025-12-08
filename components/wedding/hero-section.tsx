@@ -112,6 +112,10 @@ export default function HeroSection() {
       <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
         {/* Decorative title tile: keep all central text inside this framed area */}
         <div className="mx-auto w-full max-w-3xl relative decorative-tile px-6 sm:px-8 md:px-12 py-8 sm:py-12 flex flex-col items-center justify-center text-center">
+          {/* Semi-opaque tile under central text (50-60% opacity) */}
+          <div className="absolute inset-0 z-0 pointer-events-none bg-card/60 backdrop-blur-sm" />
+
+          <div className="relative z-10">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -170,6 +174,7 @@ export default function HeroSection() {
               View Events
             </Link>
           </motion.div>
+          </div>
         </div>
       </div>
 

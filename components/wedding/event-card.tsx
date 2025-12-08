@@ -58,6 +58,9 @@ export default function EventCard({
       <div className="absolute bottom-0 left-0 w-16 h-16 border-l-2 border-b-2 border-primary/40" />
       <div className="absolute bottom-0 right-0 w-16 h-16 border-r-2 border-b-2 border-primary/40" />
 
+      {/* Semi-opaque tile under textual content (50-60% opacity) */}
+      <div className="absolute inset-0 z-0 pointer-events-none bg-card/60 backdrop-blur-sm" />
+
       <div className="relative z-10">
         {/* Title */}
         <div className="text-center mb-8">
